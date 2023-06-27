@@ -102,10 +102,9 @@ head (fgsea_sets)
 
 ## select only the feature and auc columns for fgsea, which statistics to use is an open question !
 
-genes <- res_AB %>%
-  				  dplyr::filter(group == "5_STIM") %>%
-                  arrange(desc(auc)) %>% 
-                  dplyr::select(feature, auc)
+genes <- res_AB %>% dplyr::filter(group == "5_STIM") %>%
+                    arrange(desc(auc)) %>% 
+                    dplyr::select(feature, auc)
 
 head (genes)
 
